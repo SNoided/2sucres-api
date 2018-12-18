@@ -22,7 +22,7 @@ const MESSAGE_ID = 1
 async function run () {
   const topic = await api.getTopic(TOPIC_ID)
   const messageCount = topic.messageCount
-
+  await message.editMessage(MESSAGE_ID, `Le topic contient ${messageCount} message(s)`)
 }
 
 run().catch(err => {
