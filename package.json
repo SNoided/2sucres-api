@@ -1,0 +1,38 @@
+{
+  "name": "2sucres-api",
+  "version": "1.0.2",
+  "description": "Wrapper Node.JS autour de l'API 2sucres",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "npx mocha --timeout 5000",
+    "lint": "yarn lint:js",
+    "lint:js": "npx eslint .",
+    "build": "yarn build:doc",
+    "build:doc": "npx jsdoc2md 'src/**/*.js' --template README-template.md > README.md",
+    "todos": "npx leasot src/**/*.js"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.10.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "jsdoc-to-markdown": "^4.0.1",
+    "leasot": "^6.6.2",
+    "mocha": "^5.2.0",
+    "pre-commit": "^1.2.2"
+  },
+  "pre-commit": [
+    "lint",
+    "test",
+    "todos",
+    "build"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "ow": "^0.8.0"
+  }
+}
