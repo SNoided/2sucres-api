@@ -36,14 +36,17 @@ function apiFactory (cookies, csrfToken) {
   const request = async function (...params) {
     while (true) {
       try {
-        return await rq(...params)
+        const result = await rq(...params)
+        if (result.error) {
+          throw new ApiError(result.error)
+        }
+        return result
       } catch (err) {
         if (err instanceof ApiError) {
           if (TIMEOUT_ERRORS.includes(err.message)) {
             await sleep(1000)
             continue
           }
-          throw err
         }
         throw err
       }

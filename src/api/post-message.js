@@ -4,6 +4,7 @@ const ow = require('ow')
   * Poste un message
   *
   * @param {number} topicId
+  * @param {string} content
   */
 async function postMessage (topicId, content) {
   ow(topicId, ow.number)
