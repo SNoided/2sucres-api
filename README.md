@@ -39,6 +39,9 @@ run().catch(err => {
 <dt><a href="#clearNotifications">clearNotifications()</a></dt>
 <dd><p>Supprime les notifications</p>
 </dd>
+<dt><a href="#deleteTopic">deleteTopic(topicId)</a></dt>
+<dd><p>Supprime un topic</p>
+</dd>
 <dt><a href="#editMessage">editMessage(messageId, content)</a></dt>
 <dd><p>Édite un message</p>
 </dd>
@@ -60,11 +63,17 @@ run().catch(err => {
 <dt><a href="#getTopics">getTopics(page, forumId)</a> ⇒ <code>Array.&lt;topic&gt;</code></dt>
 <dd><p>Récupère la liste des topics</p>
 </dd>
-<dt><a href="#postMessage">postMessage(topicId)</a></dt>
+<dt><a href="#lockTopic">lockTopic(topicId)</a></dt>
+<dd><p>Lock un topic</p>
+</dd>
+<dt><a href="#postMessage">postMessage(topicId, content)</a></dt>
 <dd><p>Poste un message</p>
 </dd>
 <dt><a href="#postTopic">postTopic(title, content, options)</a></dt>
 <dd><p>Poste un topic</p>
+</dd>
+<dt><a href="#unlockTopic">unlockTopic(topicId)</a></dt>
+<dd><p>Délock un topic</p>
 </dd>
 <dt><a href="#updateTitle">updateTitle(topicId, title)</a></dt>
 <dd><p>Met à jour le titre d&#39;un topic</p>
@@ -77,6 +86,17 @@ run().catch(err => {
 Supprime les notifications
 
 **Kind**: global function  
+<a name="deleteTopic"></a>
+
+## deleteTopic(topicId)
+Supprime un topic
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| topicId | <code>number</code> | 
+
 <a name="editMessage"></a>
 
 ## editMessage(messageId, content)
@@ -158,9 +178,20 @@ Récupère la liste des topics
 | page | <code>number</code> | <code>1</code> | 
 | forumId | <code>number</code> | <code>1</code> | 
 
+<a name="lockTopic"></a>
+
+## lockTopic(topicId)
+Lock un topic
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| topicId | <code>number</code> | 
+
 <a name="postMessage"></a>
 
-## postMessage(topicId)
+## postMessage(topicId, content)
 Poste un message
 
 **Kind**: global function  
@@ -168,6 +199,7 @@ Poste un message
 | Param | Type |
 | --- | --- |
 | topicId | <code>number</code> | 
+| content | <code>string</code> | 
 
 <a name="postTopic"></a>
 
@@ -181,6 +213,17 @@ Poste un topic
 | title | <code>string</code> | 
 | content | <code>string</code> | 
 | options | <code>object</code> | 
+
+<a name="unlockTopic"></a>
+
+## unlockTopic(topicId)
+Délock un topic
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| topicId | <code>number</code> | 
 
 <a name="updateTitle"></a>
 
