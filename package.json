@@ -1,6 +1,6 @@
 {
   "name": "2sucres-api",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Wrapper Node.JS autour de l'API 2sucres",
   "main": "index.js",
   "license": "MIT",
